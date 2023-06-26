@@ -1,18 +1,17 @@
 import UserProfile from '../../components/UserProfile/UserProfile'
 import NewsCard from '../../components/News/NewsCard'
 import Weather from '../../components/Weather/Weather'
-import dashstyle from './Dashboard.module.css'
+import Homestyle from './Homepage.module.css'
 
-function Dashboardpage() {
+function Homepage() {
     return (
         <>
-            <div className={dashstyle.dashboard}>
-                <div className={dashstyle.leftsection}>
+            <div className={Homestyle.dashboard}>
+                <div className={Homestyle.leftsection}>
                     <UserProfile />
                     <Weather />
                 </div>
-                <div className={dashstyle.rightsection}> <NewsCard /></div>
-
+                <div className={Homestyle.rightsection}> <NewsCard /></div>
             </div>
 
         </>
@@ -20,4 +19,4 @@ function Dashboardpage() {
     )
 }
 
-export default Dashboardpage
+export default Homepage

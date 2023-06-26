@@ -22,7 +22,6 @@ function Form() {
         setData(values => ({ ...values, [name]: value }))
     }
 
-
     function validateForm() {
         if (data.name.length === 0 || data.username.length === 0 || data.email.length === 0 || data.mobile.length === 0 || data.term.length === 0) {
             setError(true);

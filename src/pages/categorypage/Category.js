@@ -49,7 +49,7 @@ function Category() {
                 })}
                 </div>
             </div>
-            <div className={catstyle.nextbtn}> <Link to='/dashboard'><button >Next Page</button></Link></div>
+            <div className={catstyle.nextbtn}> <Link to='/home'><button >Next Page</button></Link></div>
         </>
 
     )
