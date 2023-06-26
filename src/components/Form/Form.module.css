@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Dangrek&family=Inconsolata&family=Inter&family=Roboto&family=Single+Day&family=Space+Mono&display=swap");
+
+.rightsection {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 50vw;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1 {
+  font-family: Single Day;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 94px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #72db73;
+  margin-bottom: 0px;
+}
+.h2 {
+  margin: 4px 0px 44px 0px;
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* ::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.125em;
+  color: #bbb9bc;
+} */
+form div {
+  display: flex;
+}
+.card {
+  padding-bottom: 18px;
+  margin: 0px auto;
+}
+.card label {
+  display: block;
+  padding-bottom: 12px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.155em;
+  color: #404040;
+}
+.card input {
+  box-sizing: border-box;
+  width: 28vw;
+  height: 46px;
+  background: #292929;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+  border-radius: 4px;
+  padding: 2px;
+  padding-left: 18px;
+  font-size: 18px;
+  color: white;
+}
+
+.btncnf {
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+label {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #7c7c7c;
+}
+.btncnf button {
+  width: 28vw;
+  height: 53px;
+  color: #ffffff;
+  background: #72db73;
+  border-radius: 28px;
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.p {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #7c7c7c;
+}
+.error {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  color: #f81212;
+}
+.toast-message {
+  color: white;
+  font-size: 20px;
+  background: linear-gradient(
+      26.99deg,
+      rgba(69, 26, 78, 0.2) 52.61%,
+      rgba(60, 13, 13, 0.2) 95.07%
+    ),
+    linear-gradient(
+      164.67deg,
+      rgba(22, 4, 31, 0.98) 4.47%,
+      #380c4a 15.5%,
+      #3b0e46 19.19%,
+      #3d0f42 23.38%,
+      #441436 30.26%,
+      #33254e 36.4%,
+      #2b2d59 42.79%,
+      #292654 47.99%,
+      #271f4f 52.8%,
+      #240d37 64.72%,
+      #22052d 79.1%
+    );
+}
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  .card {
+    top: 65px;
+  }
+  .cardback-face {
+    top: 350px;
+  }
+  .rightsection {
+    justify-content: end;
+    padding: 0px;
+    padding-right: 130px;
+  }
+}
