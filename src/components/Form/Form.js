@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 function Form() {
     const navigate = useNavigate();
     const [valid, setValid] = useState(false);
-    // const [style, setStyle] = useState(false)
     const [error, setError] = useState(false);
     const [data, setData] = useState({
         name: "",
@@ -65,7 +64,7 @@ function Form() {
                 </div>
                 <div >
                     <div className={formstyle.card}>
-                        <input type='mobile' placeholder='Mobile' name="mobile" value={data.mobile} onChange={handleChange} />
+                        <input type='mobile' placeholder='Mobile' name="mobile" value={data.mobile} onChange={handleChange} minLength="10" maxLength="10" />
                         <p className={formstyle.errortext}>{error && data.mobile.length <= 0 ? "Field is required" : ""}</p>
                     </div>
                 </div>

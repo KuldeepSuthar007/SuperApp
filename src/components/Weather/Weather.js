@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import weastyle from './Weather.module.css'
-import rainimg from '../../assets/Vector (2).png'
 import pressureimg from '../../assets/Vector (3).png'
 import windimg from '../../assets/Vector (4).png'
 import humnityimg from '../../assets/Group.png'
@@ -9,18 +8,21 @@ import humnityimg from '../../assets/Group.png'
 function Weather(props) {
 
     let [weatherdata, setWeatherdata] = useState({});
+    let [conditiondata, setConditiondata] = useState({});
+
+    const apiKey = process.env.REACT_APP_WEATHER_API
 
     const updateWeather = async () => {
-        const url = `http://api.weatherapi.com/v1/current.json?key=4902336f54f84ab091070811232606&q=London`;
+        const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Sirohi`;
         let data = await fetch(url);
         let parsedData = await data.json()
+        const obj = parsedData.current["condition"]
         setWeatherdata(parsedData.current)
-
+        setConditiondata(obj)
     }
     useEffect(() => {
         updateWeather()
     }, [])
-
 
 
     return (
@@ -30,16 +32,16 @@ function Weather(props) {
             </div>
             <div className={weastyle.botcon}>
                 <div className={weastyle.box1} >
-                    <img src={rainimg} alt="" style={{ width: "90px", height: "80px" }} />
-                    {/* <p>{weatherdata.condition.text}</p> */}
+                    <img src={conditiondata.icon} alt="" style={{ width: "68px", height: "58px" }} />
+                    <p>{conditiondata.text}</p>
                 </div>
                 <hr />
                 <div className={weastyle.box2}>
-                    {/* <p>{weatherdata.temp_c}°C</p> */}
+                    <p>{weatherdata.temp_c}°C</p>
                     <div>
                         <img src={pressureimg} alt="" style={{ width: "20px", height: "35px" }} />
                         <div className={weastyle.pressure}>
-                            {/* <p>{weatherdata.pressure_mb} mbar</p> */}
+                            <p>{weatherdata.pressure_mb} mbar</p>
                             <p>Pressure</p>
                         </div>
                     </div>
@@ -48,16 +50,16 @@ function Weather(props) {
                 <hr />
                 <div className={weastyle.box3}>
                     <div>
-                        <img src={windimg} alt="" style={{ width: "40px", height: "40px" }} />
+                        <img src={windimg} alt="" style={{ width: "30px", height: "30px" }} />
                         <div className={weastyle.wind}>
-                            {/* <p>{weatherdata.wind_kph}km/h</p><p>Wind</p> */}
+                            <p>{weatherdata.wind_kph}km/h</p><p>Wind</p>
                         </div>
 
                     </div>
                     <div>
-                        <img src={humnityimg} alt="" style={{ width: "27px", height: "35px" }} />
+                        <img src={humnityimg} alt="" style={{ width: "20px", height: "27px" }} />
                         <div className={weastyle.humnity}>
-                            {/* <p>{weatherdata.humidity}%</p> */}
+                            <p>{weatherdata.humidity}%</p>
                             <p>Humidiy</p>
                         </div>
 

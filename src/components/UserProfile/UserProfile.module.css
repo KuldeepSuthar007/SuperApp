@@ -1,32 +1,33 @@
 .profcontain {
   box-sizing: border-box;
-  width: 700px;
-  min-height: 52vh;
+  width: 440px;
+  min-height: 28vh;
   background-color: #5746ea;
   border-radius: 20px;
-  margin: 40px 60px 0px 110px;
+  margin: 0px;
   display: flex;
-  padding: 20px;
+  padding: 0px;
 }
 .profcontain img {
-  width: 200px;
-  height: 400px;
+  width: 90px;
+  height: 210px;
+  margin: 22px;
 }
 .insidecont {
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .topcont {
   width: 300px;
-  min-height: 200px;
-  margin-top: 20px;
+  min-height: 120px;
+  margin-top: 10px;
 }
 .topcont p {
   font-family: Roboto;
-  font-size: 37px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 20px;
   letter-spacing: 0.02em;
   text-align: left;
   color: white;
@@ -34,32 +35,50 @@
 }
 .topcont h2 {
   font-family: Roboto;
-  font-size: 72px;
+  font-size: 38px;
   font-weight: 400;
-  line-height: 66px;
+  line-height: 31px;
   letter-spacing: 0.02em;
   text-align: left;
   color: white;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 .botcont {
-  width: 350px;
-  min-height: 150px;
-  margin-top: 20px;
+  width: 283px;
+  height: 103px;
+  min-height: 100px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   place-content: center;
   align-items: center;
 }
 
 .botcont button {
-  width: 150px;
-  height: 40px;
+  width: 82px;
+  height: 28px;
   border-radius: 20px;
   border: none;
   background-color: #9f94ff;
   color: white;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  .profcontain img {
+    height: 175px;
+  }
+  .topcont {
+    margin-top: 0px;
+  }
+  .botcont {
+    padding-bottom: 19px;
+  }
 }

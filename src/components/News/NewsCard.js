@@ -7,9 +7,10 @@ function NewsCard(props) {
 
     const [articles, setArticles] = useState([])
     const max = 1;
+    const apiKey = process.env.REACT_APP_NEWS_API
 
     const updateNews = async () => {
-        const url = `https://gnews.io/api/v4/top-headlines?&apikey=8aee70befef526833fc9c30cc4340780&max=${max}&country=in`;
+        const url = `https://gnews.io/api/v4/top-headlines?&apikey=${apiKey}&max=${max}&country=in&category=general`;
         let data = await fetch(url);
         let parsedData = await data.json()
         setArticles(parsedData.articles)

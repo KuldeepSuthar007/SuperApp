@@ -1,15 +1,33 @@
-import React from 'react'
-import catstyle from '../../pages/categorypage/Category.module.css';
-function CategoryCard({ title, img, color }) {
+import React, { useState } from 'react'
+import './Categorycard.css'
 
-    const handleClick = () => {
-        console.log(title)
+
+
+
+function CategoryCard({ title, img, color, val, setVal, handleDelete }) {
+
+    const [cardstate, setCardstate] = useState(false)
+
+
+    const handleAdd = (title) => {
+        const Addvalue = [...val, title]
+        if (!cardstate) {
+            setVal(Addvalue)
+            localStorage.setItem('selectgenre', JSON.stringify(val))
+        } else {
+            handleDelete()
+        }
+        setCardstate(cardstate => !cardstate)
     }
+
+    let mystyle = cardstate ? " active" : ' ';
+
+
     return (
         <>
-            <div className={catstyle.cat_card} style={{ backgroundColor: color }} onClick={handleClick}>
-                <p className={catstyle.title}>{title}</p>
-                <div className={catstyle.insidecat_card}><img src={img} alt="" /></div>
+            <div className={`genre_cat_card${mystyle}`} style={{ backgroundColor: color }} onClick={() => handleAdd(title)} >
+                <p className="genre_title">{title}</p>
+                <div className="genre_insidecat_card"><img src={img} alt="" /></div>
             </div>
         </>
     )

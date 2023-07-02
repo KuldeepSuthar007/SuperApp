@@ -1,25 +1,28 @@
 .wcontainer {
   box-sizing: border-box;
-  width: 700px;
+  width: 440px;
   min-height: 30vh;
-  margin: 10px 60px 0px 110px;
+  margin: 0px;
 }
 .topcon {
   background-color: #ff4ade;
   box-sizing: border-box;
-  width: 700px;
+  width: 440px;
+  height: 50px;
   min-height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  margin-top: 24px;
 }
 .topcon p {
   font-family: Roboto;
-  font-size: 35px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 78px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-align: left;
   color: white;
   display: inline;
@@ -29,25 +32,29 @@
   background-color: #101744;
   display: flex;
   color: white;
+  height: 120px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 .botcon > div {
   flex: 1;
-  padding: 20px;
+  padding: 13px;
 }
 hr {
-  height: 70px;
+  height: 50px;
   width: 2px;
-  margin-top: 60px;
+  margin-top: 36px;
 }
 .box1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .box1 p {
   font-family: Roboto;
-  font-size: 31px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 44px;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -61,7 +68,7 @@ hr {
 }
 .box2 p {
   font-family: Roboto;
-  font-size: 70px;
+  font-size: 36px;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: center;
@@ -75,7 +82,7 @@ hr {
 }
 .pressure p {
   font-family: Roboto;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
@@ -88,9 +95,7 @@ hr {
 
 .box3 div {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 3px 15px;
 }
 .wind {
   display: flex;
@@ -104,17 +109,39 @@ hr {
 }
 .wind p {
   font-family: Roboto;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
 }
 .humnity p {
   font-family: Roboto;
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 34px;
+  line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  .topcon {
+    margin-top: 8px;
+    height: 32px;
+    min-height: 32px;
+  }
+
+  .topcon p {
+    font-size: 21px;
+  }
+  .botcon {
+    height: 110px;
+  }
+  .box1 p {
+    text-align: center;
+  }
+  .wcontainer {
+    height: 145px;
+    min-height: 145px;
+  }
 }

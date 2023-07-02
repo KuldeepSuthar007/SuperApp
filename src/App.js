@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Category from "./pages/categorypage/Category";
 import './App.css'
 import Home from "./pages/homepage/Homepage";
-import Page from './pages/page4/Page';
+import BrowseEntertainment from './pages/browse entertainment page/BrowseEntertainmentPage'
+
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
           <Route path="/" element={<Registration />} />
           <Route path="/category" element={<Category />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/page4" element={<Page />} />
+          <Route path="/browse" element={<BrowseEntertainment />} />
         </Routes>
       </Router>
 

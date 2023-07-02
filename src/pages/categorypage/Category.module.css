@@ -62,6 +62,15 @@
   border: none;
   background-color: #148a08;
   color: white;
+  font-size: 21px;
+}
+.selectbtn button:hover {
+  cursor: pointer;
+}
+
+.selectbtn p {
+  display: inline;
+  margin-left: 10px;
 }
 .cards {
   height: 80vh;
@@ -72,36 +81,7 @@
   grid-auto-rows: auto;
   grid-gap: 1rem;
 }
-.cat_card {
-  box-sizing: border-box;
-  max-width: 200px;
-  height: 200px;
-  border-radius: 20px;
-}
-.title {
-  font-family: DM Sans;
-  font-size: 27px;
-  font-weight: 500;
-  line-height: 47px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: white;
-  margin: 20px 10px;
-}
-.insidecat_card {
-  box-sizing: border-box;
-  width: 190px;
-  height: 106px;
-  border-radius: 11px;
-  margin-left: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.insidecat_card img {
-  width: 190px;
-  height: 106px;
-}
+
 .nextbtn {
   display: flex;
   justify-content: end;
@@ -122,4 +102,38 @@
   text-align: center;
   color: white;
   background-color: #148a08;
+}
+
+.nextbtn button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+  .cat_text {
+    padding-top: 50px;
+  }
+  .h1 {
+    margin-bottom: 0px;
+    line-height: 70px;
+  }
+  .h2 {
+    font-size: 44px;
+    line-height: 53px;
+  }
+  .selectbtn {
+    margin-top: 10px;
+  }
+  .cards {
+    margin: 30px 0px 10px 30px;
+  }
+  .selectbtn button {
+    width: 125px;
+    height: 34px;
+    font-size: 16px;
+  }
+  .nextbtn button {
+    width: 130px;
+    height: 40px;
+    font-size: 17px;
+  }
 }

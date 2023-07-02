@@ -31,15 +31,6 @@
   color: #ffffff;
 }
 
-/* ::placeholder {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0.125em;
-  color: #bbb9bc;
-} */
 form div {
   display: flex;
 }
@@ -104,6 +95,9 @@ label {
   text-align: center;
   border: none;
 }
+.btncnf button:hover {
+  cursor: pointer;
+}
 
 .p {
   font-family: Roboto;
@@ -126,15 +120,29 @@ label {
 }
 
 @media only screen and (min-width: 1030px) and (max-width: 1366px) {
-  .card {
-    top: 65px;
+  .h1 {
+    font-size: 56px;
+    line-height: 39px;
   }
-  .cardback-face {
-    top: 350px;
+
+  .h2 {
+    margin: 0px 0px 0px 0px;
   }
-  .rightsection {
-    justify-content: end;
-    padding: 0px;
-    padding-right: 130px;
+
+  .btncnf button {
+    width: 25vw;
+    height: 39px;
+  }
+  .card input {
+    width: 26vw;
+  }
+
+  .btncnf {
+    justify-content: center;
+  }
+  .p {
+    margin-left: 5px;
+    font-size: 12px;
+    line-height: 17px;
   }
 }
